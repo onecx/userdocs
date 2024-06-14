@@ -1,5 +1,5 @@
 site:
-  title: OneCx Docs
+  title: OneCx User Docs
   url: https://onecx.github.io/userdocs/
   start_page: index::index.adoc
 content:
