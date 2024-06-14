@@ -1,0 +1,69 @@
+
+/* Styles for BPMN.io integration and callouts in these models */
+.bpmn-model {
+  position: relative;
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.callout {
+  display: inline-block;
+  color: #fff !important;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 0.75em;
+  width: 1.67em;
+  height: 1.67em;
+  line-height: 1.67em;
+  font-style: normal;
+  font-weight: bold;
+  /* margin-block-end: 1em; leads to wired effects when callout has multiple lines */
+  /* margin-inline-end: 0.75em; */
+}
+
+.thumbs-down-example {
+  border: 3px solid #bd0100;
+  /* padding-bottom: 0px; */
+}
+
+.thumbs-down {
+  color: #bd0100 !important;
+  font-size: xx-large;
+  position: absolute;
+  z-index: 10;
+}
+
+span.callout + p {
+  display: inline;
+  margin: 0 0 1.25rem;
+}
+
+span.callout + p::after {
+  content: "\a";
+  white-space: pre;
+}
+
+/* I needed to overwrite this, otherwise the DMN table is super small */
+.dmn-decision-table-container .tjs-container {
+  width: 100%;
+}
+
+.dmn-decision-table-container .tjs-table {
+  width: 100%;
+}
+
+.theme-doc-markdown img {
+  border-style: solid;
+  border-color: lightgray;
+  border-width: 1px;
+  box-shadow: 4px 4px 4px 1px lightgray;
+}
+
+.theme-doc-markdown table img {
+  border: none;
+  box-shadow: none;
+}
