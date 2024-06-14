@@ -1,6 +1,6 @@
 # Descriptor of the common Antora module that contains just a landing page for the whole documentation site
 name: index
-title: OneCx Docs
+title: OneCx User Docs
 version: latest
 nav:
 - modules/ROOT/nav.adoc
