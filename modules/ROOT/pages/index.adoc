@@ -1,0 +1,3 @@
+= OneCx documentation
+
+Welcome to the OneCx user documentation site. 

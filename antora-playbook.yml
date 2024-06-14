@@ -1,0 +1,27 @@
+site:
+  title: OneCx Docs
+  url: https://onecx.github.io/userdocs/
+  start_page: index::index.adoc
+content:
+  sources:
+    - url: . # common module containing just the main index
+      branches: HEAD
+ui:
+  bundle:
+    url: https://github.com/onecx/docs-antora-ui/releases/latest/download/ui-bundle.zip
+    snapshot: true
+  supplemental_files:
+    - path: ui.yml
+      contents: |
+        static_files:
+        - .nojekyll
+    - path: .nojekyll
+urls:
+  latest_version_segment: current
+asciidoc:
+  attributes:
+    sourcemap: true
+    kroki-fetch-diagram: true
+  extensions:
+    - ./extensions/bpmn-js.js
+    - asciidoctor-kroki
