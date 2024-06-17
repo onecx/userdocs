@@ -6,6 +6,12 @@ content:
   sources:
     - url: . # common module containing just the main index
       branches: HEAD
+    - url: https://github.com/onecx/onecx-workspace.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-workspace-ui.git
+      branches: [HEAD]
+      start_path: userdocs
 ui:
   bundle:
     url: https://github.com/onecx/docs-antora-ui/releases/latest/download/ui-bundle.zip
