@@ -4,6 +4,9 @@
 <loc>https://onecx.github.io/userdocs/sitemap-index.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://onecx.github.io/userdocs/sitemap-onecx-announcement.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://onecx.github.io/userdocs/sitemap-onecx-workspace.xml</loc>
 </sitemap>
 </sitemapindex>
