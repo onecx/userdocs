@@ -12,6 +12,60 @@ content:
     - url: https://github.com/onecx/onecx-announcement-ui.git
       branches: [HEAD]
       start_path: userdocs
+    - url: https://github.com/onecx/onecx-help.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-help-ui.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-iam.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-iam-ui.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-parameter.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-parameter-ui.git
+      branches: [HEAD]
+      start_path: userdocs
+     - url: https://github.com/onecx/onecx-permission.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-permission-ui.git
+      branches: [HEAD]
+      start_path: userdocs
+     - url: https://github.com/onecx/onecx-product-store.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-product-store-ui.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-tenant.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-tenant-ui.git
+      branches: [HEAD]
+      start_path: userdocs
+     - url: https://github.com/onecx/onecx-theme.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-theme-ui.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-user-profile.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-user-profile-ui.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-welcome.git
+      branches: [HEAD]
+      start_path: userdocs
+    - url: https://github.com/onecx/onecx-welcome-ui.git
+      branches: [HEAD]
+      start_path: userdocs
     - url: https://github.com/onecx/onecx-workspace.git
       branches: [HEAD]
       start_path: userdocs
