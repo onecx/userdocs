@@ -30,13 +30,13 @@ content:
     - url: https://github.com/onecx/onecx-parameter-ui.git
       branches: [HEAD]
       start_path: userdocs
-     - url: https://github.com/onecx/onecx-permission.git
+    - url: https://github.com/onecx/onecx-permission.git
       branches: [HEAD]
       start_path: userdocs
     - url: https://github.com/onecx/onecx-permission-ui.git
       branches: [HEAD]
       start_path: userdocs
-     - url: https://github.com/onecx/onecx-product-store.git
+    - url: https://github.com/onecx/onecx-product-store.git
       branches: [HEAD]
       start_path: userdocs
     - url: https://github.com/onecx/onecx-product-store-ui.git
