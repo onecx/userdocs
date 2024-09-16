@@ -48,7 +48,7 @@ content:
     - url: https://github.com/onecx/onecx-tenant-ui.git
       branches: [HEAD]
       start_path: userdocs
-     - url: https://github.com/onecx/onecx-theme.git
+    - url: https://github.com/onecx/onecx-theme.git
       branches: [HEAD]
       start_path: userdocs
     - url: https://github.com/onecx/onecx-theme-ui.git
