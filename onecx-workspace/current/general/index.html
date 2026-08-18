@@ -14,6 +14,20 @@
     <link href="../../../_/css/brands.css" rel="stylesheet" />
     <link href="../../../_/css/solid.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@3.52.5/swagger-ui.css">
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs'
+      mermaid.initialize({ startOnLoad: false, theme: 'default' })
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('pre code.language-mermaid').forEach((code) => {
+          const pre = code.parentElement
+          const container = document.createElement('div')
+          container.className = 'mermaid'
+          container.textContent = code.textContent
+          pre.replaceWith(container)
+        })
+        mermaid.run({ querySelector: '.mermaid' })
+      })
+    </script>
     <script>var uiRootPath = '../../../_'</script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/bpmn-js/dist/bpmn-viewer.production.min.js"></script>
@@ -25,9 +39,10 @@
   </head>
   <body class="article">
 <header class="header">
-  <nav class="navbar">
+  <nav class="navbar" style="background-image: url('../../../_/img/onecx-banner-header.png');">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://onecx.github.io/userdocs">OneCx User Docs</a>
+      <a class="navbar-item logo" title="OneCX"><img src="../../../_/img/onecx-logo.png" alt="OneCX" width="48"></a>
+      <a class="navbar-item title" href="https://onecx.github.io/userdocs">OneCx User Docs</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -36,14 +51,75 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="/docs">Home</a>
-        <!--  <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Guides</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">Projects</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="/docs/docs-guides-quarkus/latest/">Quarkus</a>
-            <a class="navbar-item" href="/docs/docs-guides-bpmn/latest/">Bpmn</a>
+            <div class="navbar-item"><strong>OneCX</strong></div>
+            <a class="navbar-item flex flex-row gap-2" href="https://github.com/onecx/">
+              <img src="../../../_/img/github-mark.png" alt="GitHub" width="20">
+              <span>Repository</span>
+            </a>
+            <a class="navbar-item flex flex-row gap-2" href="https://github.com/onecx/onecx/issues">
+              <img src="../../../_/img/github-mark.png" alt="Issue Tracker" width="20">
+              <span>Issue Tracker</span>
+            </a>
+            <hr class="navbar-divider">
+            <div class="navbar-item"><strong>OneCX Apps</strong></div>
+            <a class="navbar-item flex flex-row gap-2" href="https://github.com/onecx-apps/">
+              <img src="../../../_/img/github-mark.png" alt="GitHub" width="20">
+              <span>Repository</span>
+            </a>
           </div> 
-        </div> -->
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">Development</a>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>Tooling</strong></div>
+            <a class="navbar-item flex flex-row gap-2" href="https://onecx.github.io/userdocs/documentation/current/onecx-local-env/index.html">
+              <img src="../../../_/img/pc-wheel.png" alt="Local Environment" width="20">
+              <span>Local Environment</span>
+            </a>
+            <a class="navbar-item flex flex-row gap-2" href="https://onecx.github.io/userdocs/documentation/current/onecx-nx-plugins/index.html">
+              <img src="../../../_/img/engine-white.png" alt="App Generator" width="20">
+              <span>App Generator</span>
+            </a>
+            <hr class="navbar-divider">
+            <div class="navbar-item"><strong>Documentation</strong></div>
+            <a class="navbar-item flex flex-row gap-2" href="https://onecx.github.io/userdocs/documentation/current/onecx-docs-dev/guidelines.html">
+              <img src="../../../_/img/guideline.png" alt="Guidelines" width="20">
+              <span>Guidelines</span>
+            </a>
+            <a class="navbar-item flex flex-row gap-2" href="https://onecx.github.io/userdocs/documentation/current/onecx-docs-dev/index.html">
+              <img src="../../../_/img/guide.png" alt="Guides" width="20">
+              <span>Guides</span>
+            </a>
+            <a class="navbar-item flex flex-row gap-2" href="https://onecx.github.io/userdocs/documentation/current/onecx-portal-ui-libs/index.html">
+              <img src="../../../_/img/website-white.png" alt="UI Libraries" width="20">
+              <span>UI Libraries</span>
+            </a>
+            <a class="navbar-item flex flex-row gap-2" href="https://onecx.github.io/userdocs/documentation/current/onecx-docs-dev/quarkus.html">
+              <img src="../../../_/img/quarkus_icon_default.svg" alt="Quarkus" width="20">
+              <span>Quarkus</span>
+            </a>
+          </div> 
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item flex flex-row gap-2" href="https://onecx.github.io/userdocs/documentation/current/onecx-docs-overview/license.html">
+              <img src="../../../_/img/licence-white.png" alt="License" width="20">
+              <span>License</span>
+            </a>
+            <a class="navbar-item flex flex-row gap-2" href="https://onecx.github.io/userdocs/documentation/current/onecx-docs-overview/contributing.html">
+              <img src="../../../_/img/users-white.png" alt="Contributing" width="20">
+              <span>Contributing</span>
+            </a>
+            <a class="navbar-item flex flex-row gap-2" href="https://onecx.github.io/userdocs/documentation/current/onecx-docs-overview/code-of-conduct.html">
+              <img src="../../../_/img/agreement-white.png" alt="Code of Conduct" width="20">
+              <span>Code of Conduct</span>
+            </a>
+          </div> 
+        </div>
         <div class="navbar-item">
           <span class="control">
           </span>
@@ -198,7 +274,23 @@
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
+  <div class="toc-container">
+    <div class="toc-menu"></div>
+    <div class="toc-menu">
+      <h3>Common</h3>
+      <ul>
+        <li data-level="1">        
+          <a href="../../../documentation/current/onecx-docs-overview/license.html">License</a>
+        </li>
+        <li data-level="1">        
+          <a href="../../../documentation/current/onecx-docs-overview/contributing.html">Contributing</a>
+        </li>
+        <li data-level="1">        
+          <a href="../../../documentation/current/onecx-docs-overview/code-of-conduct.html">Code of Conduct</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </aside>
 <article class="doc">
       <h1 class="page">OneCX Workspace Management</h1>
